@@ -1,0 +1,14 @@
+.Box{
+  width : 100px;
+  height : 100px;
+  display : inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.BoxGrid{
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  gap : 10px;
+}

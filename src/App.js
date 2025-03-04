@@ -1,6 +1,6 @@
 import "./App.css";
-import LuckyN from "./LuckyN";
-import { sum } from "./utils";
+// import LuckyN from "./LuckyN";
+// import { sum } from "./utils";
 // import Counter from "./Counter";
 // import Dumbo from "./Dumbo";
 // import ScoreKeeper from "./ScoreKeeper";
@@ -9,17 +9,20 @@ import { sum } from "./utils";
 // import Die from "./Die";
 //import LuckyN from "./LuckyN";
 
-function lessThan4(dice){
-  return sum(dice) < 4;
-}
+// function lessThan4(dice){
+//   return sum(dice) < 4;
+// }
 
-function allSameValue(dice){
-  return dice.every((v) => v === dice[0]);
-}
+// function allSameValue(dice){
+//   return dice.every((v) => v === dice[0]);
+// }
+
+import BoxGrid from "./BoxGrid";
 
 function App() {
   return (
     <div className="App">
+      <BoxGrid />
       {/* <Counter /> */}
       {/* <Dumbo /> */}
       {/* <ScoreKeeper /> */}
@@ -31,8 +34,8 @@ function App() {
       <Dice dice={[1,2,4,1]} /> */}
       {/* <ScoreKeeper numPlayers={3} target={3} /> */}
 
-      <LuckyN numDice={2} winCheck={lessThan4} title="Roll less than 4"/>
-      <LuckyN numDice={3} winCheck={allSameValue} title="Roll the same number"/>
+      {/* <LuckyN numDice={2} winCheck={lessThan4} title="Roll less than 4"/>
+      <LuckyN numDice={3} winCheck={allSameValue} title="Roll the same number"/> */}
 
     </div>
   );
