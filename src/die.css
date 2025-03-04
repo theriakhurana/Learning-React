@@ -1,0 +1,22 @@
+.Die{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 0 10px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    background-color: rgb(80, 31, 99);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.Dice{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}

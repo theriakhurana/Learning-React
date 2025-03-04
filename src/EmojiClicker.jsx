@@ -1,43 +1,45 @@
 import { useState } from "react";
-import {v4 as uuid} from "uuid";
-export default function EmojiClicker(){
+import { v4 as uuid } from "uuid";
+export default function EmojiClicker() {
+  const [emojis, setEmojis] = useState(() => [{ id: uuid(), emoji: ":)" }]);
 
-  const [emojis, setEmojis] = useState(() => [{id: uuid(), emoji: ":)"}]);
+  const addEmoji = () => {
+    setEmojis((oldEmojis) => [
+      ...oldEmojis,
+      { id: uuid(), emoji: randomEmoji() },
+    ]);
+  };
 
-  const addEmoji = () =>{
-    setEmojis((oldEmojis)=> [...oldEmojis, {id: uuid(), emoji: randomEmoji()}]);
-  }
+  const deleteEmoji = (id) => {
+    setEmojis((prevEmojis) => {
+      return prevEmojis.filter((e) => e.id !== id);
+    });
+  };
 
-  const deleteEmoji = (id) =>{
-    setEmojis(prevEmojis => {
-      return prevEmojis.filter(e => e.id !== id); 
-    })
-  }
-
-  const change = () =>{
-    setEmojis(oldEmojis => {
-      return oldEmojis.map(e => {
+  const change = () => {
+    setEmojis((oldEmojis) => {
+      return oldEmojis.map((e) => {
         return {
           ...e,
-          emoji : "#"
+          emoji: "#",
         };
-      }) 
-    })
-  }
+      });
+    });
+  };
 
-  function randomEmoji(){
+  function randomEmoji() {
     const emojis = [":)", ":(", ":D", ":P", ":O"];
     return emojis[Math.floor(Math.random() * emojis.length)];
   }
   return (
     <div>
       {emojis.map((e) => (
-        <span 
-          onClick={()=> deleteEmoji(e.id)}
-          key = {e.id} 
-          style= {{fontSize : "4rem"}}
+        <span
+          onClick={() => deleteEmoji(e.id)}
+          key={e.id}
+          style={{ fontSize: "4rem" }}
         >
-        {e.emoji}
+          {e.emoji}
         </span>
       ))}
       <button onClick={addEmoji}>Add Emoji</button>
@@ -48,4 +50,4 @@ export default function EmojiClicker(){
 
 /*
 {id:dhdwdblcm, emoji: ":)"}
-*/ 
+*/
