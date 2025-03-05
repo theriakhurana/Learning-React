@@ -1,11 +1,13 @@
 import "./App.css";
 
-import UsernameForm from "./forms/UsernameForm";
+// import UsernameForm from "./forms/UsernameForm";
+import BetterSignupForm from "./forms/BetterSignupForm";
+
 
 function App() {
   return (
     <div className="App">
-      <UsernameForm />
+      <BetterSignupForm />
     </div>
   );
 }
