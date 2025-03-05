@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {getRolls, sum} from './utils';
+import {getRolls, sum} from '../utils';
 import './Lucky7.css';
 
 export default function Lucky7() {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getRolls, sum } from "./utils";
+import { getRolls, sum } from "../utils";
 import Dice from "./Dice";
 import Button from "./Button";
 import "./die.css";
